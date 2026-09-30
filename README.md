@@ -1,6 +1,6 @@
 # Intellign Tools — Examples
 
-Practical examples for **Intellign Tools**: browser-first utilities for images, QR payloads, and embeddable everyday tools.
+Practical examples for **Intellign Tools**: browser-first utilities for images, audio, QR payloads, and embeddable everyday tools.
 
 - Tools: https://tools.intellign.us
 - Developers: https://tools.intellign.us/developers
@@ -26,6 +26,17 @@ const avatar = await images.prepare(file, { use: 'avatar' });
 ```
 
 Image APIs run in the browser and require modern browser primitives including `File`, `createImageBitmap`, and Canvas. Compression keeps the original file unless processing produces a strictly smaller result.
+
+## Audio
+
+Audio V1 is available today as browser-first hosted tools. Audio is **not yet part of the `@intellign/tools` SDK API**, so these examples use the canonical Intellign Tools surfaces rather than pretending an npm export exists.
+
+- BPM + Key Finder — https://tools.intellign.us/bpm-key-finder
+- Audio Converter — https://tools.intellign.us/audio-converter
+- Audio Compressor — https://tools.intellign.us/audio-compressor
+- Master Check — https://tools.intellign.us/master-check
+
+For compact integrations, append `?compact` to a canonical tool URL. The hosted audio implementation keeps the audio file on-device; the converter/compressor lazily loads its browser codec when needed.
 
 ## QR payloads
 
@@ -60,7 +71,7 @@ See live integration guidance at https://tools.intellign.us/embed.
 
 - `examples/browser-image.ts` — browser image processing
 - `examples/qr-payload.mjs` — QR payload generation
-- `examples/embed.html` — drop-in hosted tool
+- `examples/embed.html` — drop-in hosted tool\n- `examples/audio-embed.html` — hosted Audio V1 compact integrations
 
 ## Repository boundary
 
