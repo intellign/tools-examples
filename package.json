@@ -4,6 +4,10 @@
   "version": "0.0.0",
   "description": "Examples and integrations for Intellign Tools.",
   "type": "module",
-  "scripts": {"example:qr": "node examples/qr-payload.mjs"},
-  "dependencies": {"@intellign/tools": "^0.1.0"}
+  "scripts": {
+    "example:qr": "node examples/qr-payload.mjs"
+  },
+  "dependencies": {
+    "@intellign/tools": "^0.2.4"
+  }
 }
